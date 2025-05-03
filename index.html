@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Issues Reporter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Eco-Connect</h1>
+        <p id="status-message" class="status-message">Report environmental issues in your community</p>
+    </header>
+    
+    <main>
+        <div class="container">
+            <section class="report-form">
+                <h2>Report an Issue</h2>
+                <form id="issue-form">
+                    <div class="form-group">
+                        <label for="issue-title">Issue Title:</label>
+                        <input type="text" id="issue-title" required placeholder="Brief description of the issue">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="issue-location">Location:</label>
+                        <input type="text" id="issue-location" required placeholder="Street address, park name, or coordinates">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="issue-type">Issue Type:</label>
+                        <select id="issue-type" required>
+                            <option value="">-- Select Type --</option>
+                            <option value="Pollution">Pollution</option>
+                            <option value="Waste Dumping">Waste Dumping</option>
+                            <option value="Deforestation">Deforestation</option>
+                            <option value="Wildlife Danger">Wildlife Danger</option>
+                            <option value="Water Contamination">Water Contamination</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="issue-description">Description:</label>
+                        <textarea id="issue-description" required placeholder="Provide details about the environmental issue..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" id="submit-btn">Submit Report</button>
+                        <button type="button" id="clear-btn">Clear Form</button>
+                    </div>
+                </form>
+            </section>
+            
+            <section class="reports-display">
+                <h2>Reported Issues</h2>
+                <div id="issues-container">
+                    <p class="no-issues">No issues reported yet. Be the first to report!</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Eco-Connect | Making our world cleaner together</p>
+    </footer>
+    
+    <button class="theme-toggle" id="theme-toggle">🌓</button>
+    
+    <script src="script.js"></script>
+</body>
+</html>
